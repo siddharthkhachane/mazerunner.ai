@@ -678,6 +678,7 @@ export default function MazeSolverBob() {
                 >
                   Start Training
                 </button>
+              </div>
               <div className="flex space-x-2">
                 <button
                   className="px-3 py-2 bg-purple-600 text-white rounded-md"
