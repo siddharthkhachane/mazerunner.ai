@@ -447,7 +447,7 @@ export default function MazeSolverBob() {
         const state = getState(currentAgent);
         
         const action = Math.random() < currentEpsilon ? 
-                       Math.floor(Math.random() * 4) : // More exploration early on
+                       Math.floor(Math.random() * 4) :
                        tf.tidy(() => {
                          const stateTensor = tf.tensor2d([state], [1, state.length]);
                          const qValues = modelRef.current.predict(stateTensor);
@@ -670,7 +670,14 @@ export default function MazeSolverBob() {
                   Erase
                 </button>
               </div>
-              
+              <div className="flex space-x-2">
+                <button
+                  className="px-3 py-2 bg-blue-600 text-white rounded-md"
+                  onClick={startTraining}
+                  disabled={!start || !goal}
+                >
+                  Start Training
+                </button>
               <div className="flex space-x-2">
                 <button
                   className="px-3 py-2 bg-purple-600 text-white rounded-md"
