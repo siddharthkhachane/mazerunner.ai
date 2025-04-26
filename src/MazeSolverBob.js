@@ -627,7 +627,7 @@ export default function MazeSolverBob() {
   
   return (
     <div className="flex flex-col items-center p-4 space-y-4 w-full bg-gray-100">
-      <h1 className="text-2xl font-bold text-gray-800"> Maze Runner</h1>
+      <h1 className="text-2xl font-bold text-gray-800"> Maze Runner AI</h1>
       
       <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 w-full justify-center">
       <div className="bg-white p-4 rounded-lg shadow-md">
@@ -725,7 +725,7 @@ export default function MazeSolverBob() {
             <ol className="list-decimal list-inside space-y-2 text-sm">
               <li>Draw walls using the Wall tool</li>
               <li>Place a start point and a goal point</li>
-              <li>Click "Start Training" to let the blob learn</li>
+              <li>Click "Press Run</li>
               <li>After training, click "Show Solution" to see the path</li>
             </ol>
           </div>
