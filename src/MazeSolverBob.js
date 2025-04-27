@@ -697,36 +697,39 @@ export default function MazeSolverBob() {
             </div>
           )}
           
-          {gameState !== DRAWING && (
-            <div className="flex flex-col mt-4 space-y-4">
-              <div className="flex space-x-2">
-                <button
-                  className="px-3 py-2 bg-green-600 text-white rounded-md"
-                  onClick={playGame}
-                >
-                  Show Solution
-                </button>
-                <button
-                  className="px-3 py-2 bg-gray-600 text-white rounded-md"
-                  onClick={resetAll}
-                >
-                  Reset All
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
-        
-        <div className="flex flex-col space-y-4">
-          <div className="bg-white p-4 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold mb-2">Stats</h2>
-            <div className="space-y-2">
-              <p>Mode: <span className="font-medium">{gameState}</span></p>
-              <p>Episodes: <span className="font-medium">{episode}</span></p>
-              <p>Score: <span className="font-medium">{score}</span></p>
-              {trainComplete && <p className="text-green-600 font-semibold">Training Complete!</p>}
-            </div>
-          </div>
+          <>
+  {gameState !== DRAWING && (
+    <div className="flex flex-col mt-4 space-y-4">
+      <div className="flex space-x-2">
+        <button
+          className="px-3 py-2 bg-green-600 text-white rounded-md"
+          onClick={playGame}
+        >
+          Show Solution
+        </button>
+        <button
+          className="px-3 py-2 bg-gray-600 text-white rounded-md"
+          onClick={resetAll}
+        >
+          Reset All
+        </button>
+      </div>
+    </div>
+  )}
+  
+  <div className="flex flex-col space-y-4">
+    <div className="bg-white p-4 rounded-lg shadow-md">
+      <h2 className="text-xl font-semibold mb-2">Stats</h2>
+      <div className="space-y-2">
+        <p>Mode: <span className="font-medium">{gameState}</span></p>
+        <p>Episodes: <span className="font-medium">{episode}</span></p>
+        <p>Score: <span className="font-medium">{score}</span></p>
+        {trainComplete && <p className="text-green-600 font-semibold">Training Complete!</p>}
+      </div>
+    </div>
+  </div>
+</>
+
           
           <div className="bg-white p-4 rounded-lg shadow-md">
             <h2 className="text-xl font-semibold mb-2">Instructions</h2>
